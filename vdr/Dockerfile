@@ -4,7 +4,6 @@ MAINTAINER Stefan Geisbacher <stefan.geisbacher@gmail.com>
 WORKDIR /tmp
 
 #RUN mkdir -p /var/lib/video
-#ADD channels.conf /etc/vdr/channels.conf
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -22,13 +21,6 @@ RUN apt-get update && \
 	apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 ADD run.sh /run.sh
-
-# add configs
-#ADD var/lib/vdr/* /var/lib/vdr/
-#ADD var/lib/vdr/plugins/streamdev-server/* /var/lib/vdr/plugins/streamdev-server/
-#ADD var/lib/vdr/plugins/iptv/* /var/lib/vdr/plugins/iptv/
-#RUN rm /etc/vdr/conf.d/*
-#ADD etc/vdr/conf.d/* /etc/vdr/conf.d/
 
 # Configure the vdr user account and it's folders
 RUN groupmod -o -g 666 vdr \
