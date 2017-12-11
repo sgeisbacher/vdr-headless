@@ -14,9 +14,9 @@ RUN apt-get update && \
 	vdr \
 	vdr-plugin-epgsearch \
 	vdr-plugin-live \
-	vdr-plugin-vnsiserver \
 	vdr-plugin-svdrpservice \
 	vdr-plugin-streamdev-server \
+	vdr-plugin-vnsiserver \
 	libmariadbclient18 uuid \
 	nano && \
 	apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
@@ -38,6 +38,7 @@ RUN groupmod -o -g 666 vdr \
 RUN chmod a+x /usr/bin/vdr && chmod a+x /run.sh
 
 ADD streamdevhosts.conf /etc/vdr/plugins/streamdev-server/streamdevhosts.conf
+ADD vnsiserver_allowed_hosts.conf /etc/vdr/plugins/vnsiserver/allowed_hosts.conf
 ADD setup.conf /etc/vdr/setup.conf
 ADD channels.conf /etc/vdr/channels.conf
 
