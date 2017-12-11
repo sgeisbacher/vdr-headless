@@ -39,6 +39,7 @@ RUN chmod a+x /usr/bin/vdr && chmod a+x /run.sh
 
 ADD streamdevhosts.conf /etc/vdr/plugins/streamdev-server/streamdevhosts.conf
 ADD setup.conf /etc/vdr/setup.conf
+ADD channels.conf /etc/vdr/channels.conf
 
 VOLUME /var/lib/video
 
