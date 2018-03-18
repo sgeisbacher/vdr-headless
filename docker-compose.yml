@@ -9,4 +9,7 @@ services:
       - "8008:8008"
       - "34890:34890"
     tty: true
-    
+    volumes:
+      - "/etc/timezone:/etc/timezone:ro"
+      - "/etc/localtime:/etc/localtime:ro"
+
