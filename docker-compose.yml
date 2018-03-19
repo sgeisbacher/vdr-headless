@@ -5,7 +5,7 @@ services:
     devices:
       - "/dev/dvb:/dev/dvb"
     volumes:
-      - /srv/recordings:/recordings
+      - ./recordings:/recordings
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
       - ./timers.conf:/etc/vdr/timers.conf
