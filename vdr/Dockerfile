@@ -34,7 +34,7 @@ ADD vnsiserver_allowed_hosts.conf /etc/vdr/plugins/vnsiserver/allowed_hosts.conf
 ADD setup.conf /etc/vdr/setup.conf
 ADD channels.conf /etc/vdr/channels.conf
 
-VOLUME /var/lib/video
+VOLUME /recordings
 
 EXPOSE 2004 3000 6419 8002 8008 4010-4020/udp 34890
 
