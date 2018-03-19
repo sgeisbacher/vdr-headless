@@ -35,6 +35,7 @@ ADD setup.conf /etc/vdr/setup.conf
 ADD channels.conf /etc/vdr/channels.conf
 
 VOLUME /recordings
+VOLUME /etc/vdr/timers.conf
 
 EXPOSE 2004 3000 6419 8002 8008 4010-4020/udp 34890
 

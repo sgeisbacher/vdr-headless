@@ -8,6 +8,7 @@ services:
       - /srv/recordings:/recordings
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
+      - ./timers.conf:/etc/vdr/timers.conf
     ports:
       - "3001:3000"
       - "8008:8008"
